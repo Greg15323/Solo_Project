@@ -12,12 +12,12 @@ const Form = () => {
     }
 
     const clear = () => {
-        
+
     }
     
     return (
         <Paper className={classes.paper}>
-            <form autoComplete="off" noValidate className={classes.form} onSubmit={handleSubmit}>
+            <form autoComplete="off" noValidate className={`${classes.root} ${classes.form}`} onSubmit={handleSubmit}>
                 <Typography variant="h6">Creating a Post</Typography>
                 <TextField name="creator" variant="outlined" label="Creator" fullWidthvalue={postData.creator}onChange={(e) => setPostData({ ...postData, creator: e.target.value })}/>
                 <TextField name="title" variant="outlined" label="Title" fullWidthvalue={postData.title}onChange={(e) => setPostData({ ...postData, title: e.target.value })}/>
