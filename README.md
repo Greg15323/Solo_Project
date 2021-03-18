@@ -1,3 +1,5 @@
+# Solo Project
+
 This final project was built using React, Node.js, Express & MongoDB. 
 The App is called "Glimpse" and it is a simple social media app that allows users to post interesting events that happened in their lives with the ability to like delete those posts.
 
