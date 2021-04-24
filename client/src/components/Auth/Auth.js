@@ -29,15 +29,11 @@ const Auth = () => {
                         {
                             isSignup && (
                                 <>
-                                  <Grid xs={6} md={12}>
-                                    <TextField name="firstName" label="First Name" handleChange={handleChange} autoFocus xs={6} />
-                                  </Grid>
-                                  <Grid xs={6} md={12}>
-                                    <TextField name="firstName" label="First Name" handleChange={handleChange} autoFocus xs={6} />
-                                  </Grid>
-                                </>
-                            )
-                        }
+                                    <Input name="firstName" label="First Name" handleChange={handleChange} autoFocus half />
+                                    <Input name="firstName" label="First Name" handleChange={handleChange} autoFocus half />
+                                  </>
+                            )}
+                            <Input name="email" label="Email Address" handleChange={handleChange} />
                     </Grid>
                 </form>
             </Paper>
