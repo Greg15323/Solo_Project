@@ -43,7 +43,9 @@ const Auth = () => {
                     <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
                         {isSignup ? 'Sign Up' : 'Sign In' }
                     </Button>
-                
+                    <Grid>
+                        
+                    </Grid>
                 </form>
             </Paper>
         </Container>
