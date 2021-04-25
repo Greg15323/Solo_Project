@@ -33,7 +33,8 @@ const Auth = () => {
                                     <Input name="firstName" label="First Name" handleChange={handleChange} autoFocus half />
                                   </>
                             )}
-                            <Input name="email" label="Email Address" handleChange={handleChange} />
+                            <Input name="email" label="Email Address" handleChange={handleChange} type="email" />
+                            <Input name="password" label="Password" handleChange={handleChange} type="password" />
                     </Grid>
                 </form>
             </Paper>
