@@ -10,6 +10,8 @@ const Auth = () => {
 
     const isSignup = false;
 
+    const handleShowPassword = () => setShowPassword((prevShowPassword) => !prevShowPassword);
+
     const handleSubmit = () => {
 
     };
@@ -35,7 +37,7 @@ const Auth = () => {
                                   </>
                             )}
                             <Input name="email" label="Email Address" handleChange={handleChange} type="email" />
-                            <Input name="password" label="Password" handleChange={handleChange} type="password" />
+                            <Input name="password" label="Password" handleChange={handleChange} type={showPassword ? "text" : "password"} handleShowPassword={handleShowPassword} />
                     </Grid>
                 </form>
             </Paper>
