@@ -25,7 +25,15 @@ const Auth = () => {
     const switchMode = () => {
         setIsSignup((prevIsSignup) => !prevIsSignup);
         handleShowPassword(false);
-    }
+    };
+
+    const googleSuccess = (res) => {
+        console.log(res);
+    };
+
+    const googleFailure = () => {
+        console.log('Google Sign In was unsuccessful. Try Again Later');
+    };  
 
     return (
         <Container component ="main" maxWidth="xs">
@@ -62,6 +70,9 @@ const Auth = () => {
                                 Google Sign In
                             </Button>
                         )}
+                        onSuccess={googleSuccess}
+                        onFailure={googleFailure}
+                        cookiePolicy="single_host_origin"
                     />
                     <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
                         {isSignup ? 'Sign Up' : 'Sign In' }
