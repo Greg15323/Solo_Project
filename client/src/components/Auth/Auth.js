@@ -18,6 +18,10 @@ const Auth = () => {
 
     const handleChange = () => {
 
+    };
+
+    const switchMode = () => {
+
     }
 
     return (
@@ -43,8 +47,12 @@ const Auth = () => {
                     <Button type="submit" fullWidth variant="contained" color="primary" className={classes.submit}>
                         {isSignup ? 'Sign Up' : 'Sign In' }
                     </Button>
-                    <Grid>
-                        
+                    <Grid container justify="flex-end">
+                            <Grid item>
+                                <Button onClick={switchMode}>
+                                    { isSignup ? 'Already have an account? Sign In' : "Don't have an account? Sign Up"}
+                                </Button>
+                            </Grid>
                     </Grid>
                 </form>
             </Paper>
