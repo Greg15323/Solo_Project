@@ -12,6 +12,7 @@ const Auth = () => {
     const classes = useStyles();
     const [showPassword, setShowPassword] = useState(false);
     const [isSignup, setIsSignup] = useState(false);
+    const [formData, setFormData] = useState();
     const dispatch = useDispatch ();
     const history = useHistory();
 
