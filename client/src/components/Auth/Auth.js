@@ -20,8 +20,10 @@ const Auth = () => {
 
     const handleShowPassword = () => setShowPassword((prevShowPassword) => !prevShowPassword);
 
-    const handleSubmit = () => {
-
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        console.log(formData);
     };
 
     const handleChange = () => {
