@@ -7,6 +7,7 @@ import Icon from './icon';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import useStyles from './styles'; 
 import Input from './Input';
+import { signin, signup } from '../../actions/auth';
 
 const initialState = { firstName: '', lastName: '', email: '', passoword: '', confirmPassword: '' }; 
 
@@ -23,7 +24,11 @@ const Auth = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         
-        console.log(formData);
+        if(isSignup) {
+          dispatch(signup(formData, history));
+        } else {
+          dispatch(signin(formData, history)); 
+        }
     };
 
     const handleChange = (e) => {
