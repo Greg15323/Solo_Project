@@ -11,7 +11,7 @@ export const signin = (formData, history) => async (dispatch) => {
     }
 };
 
-export const signin = (formData, history) => async (dispatch) => {
+export const signup = (formData, history) => async (dispatch) => {
     try {
         // sign up the user..
 
