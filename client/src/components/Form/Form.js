@@ -29,6 +29,16 @@ const Form = ({ currentId, setCurrentId }) => {
         }
     };
 
+    if(!user?.result?.name) {
+        return (
+            <Paper className={classes.paper}>
+                <Typography variant="h6" align="center">
+                    Please Sign In to create your own Glimpse and like others Glimpse.
+                </Typography>
+            </Paper>
+        )
+    }
+
     const clear = () => {
         setCurrentId(null);
         setPostData({ title: '', message: '', tags: '', selectedFile: ''});
